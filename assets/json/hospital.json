@@ -1,0 +1,22 @@
+{
+    "hospitals": [
+    {
+        "id": 1,
+        "hospital": "General Doctor",
+        "image": "https://mhealthintelligence.com/images/site/article_headers/_normal/ThinkstockPhotos-668389618.jpg",
+        "total": 647
+    },
+    {
+        "id": 1,
+        "hospital": "Pediatrics",
+        "image": "https://st3.depositphotos.com/13349494/17896/i/450/depositphotos_178964966-stock-photo-stethoscope-paper-cardiogram-scattered-pills.jpg",
+        "total": 324
+    },
+    {
+        "id": 1,
+        "hospital": "Cardiologic",
+        "image": "https://img.freepik.com/premium-vector/heart-checkup-banner-concept-idea-health-care-disease-diagnosis-doctor-examine-heart-with-stethoscope-cardiology-specialist-illustration-style_277904-4798.jpg",
+        "total": 524
+    }
+]
+}
