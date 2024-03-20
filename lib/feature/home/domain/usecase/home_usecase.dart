@@ -1,5 +1,11 @@
+import 'dart:convert';
+
+import 'package:alpa/core/services/state/state_handler_bloc.dart';
+import 'package:alpa/feature/home/data/model/home/home_model.dart';
 import 'package:alpa/feature/home/domain/entities/category_model.dart';
+import 'package:alpa/flavors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class HomeUseCase {
   List<CategoryModel> categoryList = [
@@ -14,4 +20,18 @@ class HomeUseCase {
     const CategoryModel(
         iconData: Icons.swap_vert_circle_outlined, name: 'Covid-19'),
   ];
+
+  List<Widget> listOfWidget = [];
+  StateHandlerBloc listState = StateHandlerBloc();
+
+  addDataToList() async {
+    String jsonString =
+        await rootBundle.loadString('assets/json/${FlavorSettings.name}.json');
+    Map<String, dynamic> jsonData = jsonDecode(jsonString);
+
+    for (var element in jsonData['homepage']) {
+      listOfWidget.add(HomeModel().getWidget(element['name']));
+    }
+    listState.storeData(data: listOfWidget);
+  }
 }

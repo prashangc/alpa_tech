@@ -1,0 +1,17 @@
+{
+    "homepage": [
+        {
+            "name": "departments",
+            "order": 1
+        },
+        {
+            "name": "hospital",
+            "order": 2
+
+        },
+        {
+            "name": "departments",
+            "order": 0
+        }
+    ]
+}
